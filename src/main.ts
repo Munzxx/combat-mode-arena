@@ -1,5 +1,7 @@
 import Phaser from 'phaser';
-import { BootScene, GAME_HEIGHT, GAME_WIDTH } from './scenes/BootScene';
+import { GAME_HEIGHT, GAME_WIDTH } from './config';
+import { BattleScene } from './scenes/BattleScene';
+import { BootScene } from './scenes/BootScene';
 
 new Phaser.Game({
   type: Phaser.AUTO,
@@ -13,5 +15,5 @@ new Phaser.Game({
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
   input: { activePointers: 3 },
-  scene: [BootScene],
+  scene: [BootScene, BattleScene],
 });
